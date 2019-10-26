@@ -1,16 +1,16 @@
-const axios = require(`axios`);
 const fs = require(`fs`);
-const { getWordAsNum } = require(`./utils`);
+const { getWordAsNum, fetch } = require(`./utils`);
 
-const dictionaryUrl = `https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt`;
+const defaultDictionaryUrl = `https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt`;
 
-const getDictionary = () => {
-    return axios.get(dictionaryUrl);
+const getDictionary = async (url = defaultDictionaryUrl) => {
+    const res = await fetch(url);
+    return await res.text();
 }
 
 const main = async () => {
     const dict = await getDictionary();
-    const arr = dict.data.split(`\r\n`);
+    const arr = dict.split(`\r\n`);
     const indexes = arr.reduce((memo, word) => {
         const num = getWordAsNum(word);
         if (!memo.hasOwnProperty(num)) {

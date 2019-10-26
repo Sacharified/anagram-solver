@@ -11,5 +11,11 @@ const isAnagram = (word, chars) => {
 
     return true;
 }
+const fetch = typeof window === "undefined" ? require(`node-fetch`): window.fetch;
 
-module.exports = { sum, getWordAsNum, isAnagram };
+module.exports = {
+    sum,
+    getWordAsNum,
+    isAnagram,
+    fetch
+};

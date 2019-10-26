@@ -1,5 +1,4 @@
-const { getWordAsNum, isAnagram } = require(`./utils`);
-const fetch = typeof window === "undefined" ? require(`node-fetch`): window.fetch;
+const { getWordAsNum, isAnagram, fetch } = require(`./utils`);
 
 const defaultDictionary = `https://gist.githubusercontent.com/Sacharified/8e73828b9559abefde699d1ebd93e1ea/raw/3505330e49eac44e514e7dd5f2a8467067eca10c/asciiindexeddictionary.json`;
 

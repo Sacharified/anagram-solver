@@ -1,16 +1,14 @@
 {
   "name": "anagram-solver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Find anagrams of a given set of characters",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sacha Guddoy",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
-    "node-fetch": "^2.6.0",
-    "yargs": "^14.2.0"
+    "node-fetch": "^2.6.0"
   }
 }
